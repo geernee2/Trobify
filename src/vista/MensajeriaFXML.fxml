@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MensajeriaController">
+   <children>
+      <AnchorPane prefHeight="588.0" prefWidth="327.0">
+         <children>
+            <AnchorPane prefHeight="97.0" prefWidth="327.0" style="-fx-background-color: orange;">
+               <children>
+                  <Text layoutX="114.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensajería" textAlignment="CENTER" wrappingWidth="168.13671875">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="userImage" fitHeight="75.0" fitWidth="75.0" layoutX="25.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="97.0" prefHeight="492.0" prefWidth="327.0" style="-fx-background-color: blue;">
+               <children>
+                  <ScrollPane prefHeight="492.0" prefWidth="327.0">
+                     <content>
+                        <VBox fx:id="contactBox" prefHeight="490.0" prefWidth="325.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="327.0" prefHeight="589.0" prefWidth="603.0">
+         <children>
+            <AnchorPane prefHeight="97.0" prefWidth="603.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <ImageView fx:id="imagenConver" fitHeight="71.0" fitWidth="77.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="inmuebleConver" layoutX="114.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="374.53369140625">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nombreConver" layoutX="114.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="374.53369140625">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="97.0" prefHeight="492.0" prefWidth="603.0" style="-fx-background-color: lightgreen;">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="417.0" prefWidth="576.0" style="-fx-background-color: skyblue;">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="576.0">
+                           <content>
+                              <VBox prefHeight="415.0" prefWidth="574.0">
+                                 <children>
+                                    <AnchorPane fx:id="contChat" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="574.0" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <TextArea fx:id="campoMensaje" layoutX="12.0" layoutY="442.0" prefHeight="46.0" prefWidth="498.0" promptText="Empieza la conversación!" wrapText="true" />
+                  <Button layoutX="524.0" layoutY="442.0" mnemonicParsing="false" onAction="#añadirMensaje" prefHeight="46.0" prefWidth="67.0" text="Enviar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

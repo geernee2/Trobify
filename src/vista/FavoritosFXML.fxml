@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FavoritosController">
+   <children>
+      <AnchorPane layoutX="-5.0" layoutY="1.0" prefHeight="120.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../recursos/logoFinal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconoUsuario" fitHeight="70.0" fitWidth="70.0" layoutX="1047.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../recursos/iconoCuenta.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="138.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trobify" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Comic Sans MS" size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="botonMiCuenta" layoutX="1027.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedIniciarSesion" prefHeight="40.0" prefWidth="125.0" text="Mi cuenta" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="35.0">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+            <ChoiceBox fx:id="choiceGrupoFav" layoutX="565.0" layoutY="69.0" prefWidth="150.0" />
+            <Text layoutX="527.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tus favoritos">
+               <font>
+                  <Font name="Comic Sans MS" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="272.0" layoutY="620.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="620.0" />
+      <AnchorPane layoutY="120.0" prefHeight="499.0" prefWidth="1280.0">
+         <children>
+            <ScrollPane fx:id="scrollPaneResultados" prefHeight="499.0" prefWidth="1280.0" vvalue="1.0">
+               <content>
+                  <AnchorPane prefHeight="1100.0" style="-fx-background-color: D3D3D3;">
+                     <children>
+                        <AnchorPane fx:id="panelInmueble0" onMouseClicked="#ClickInmueble0" prefHeight="180.0" prefWidth="1263.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="imageView0" fitHeight="140.0" fitWidth="200.0" layoutX="37.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="48.5" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="19.0">
+                                 <image>
+                                    <Image url="@../recursos/fondoInicio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="textPrecio0" layoutX="691.0" layoutY="75.0" text="*Precio*" AnchorPane.leftAnchor="691.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumHabs0" layoutX="276.0" layoutY="68.0" text="*Num. habs*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumBanyos0" layoutX="377.0" layoutY="68.0" text="*Num. Baños*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textTipoInmueble0" layoutX="276.0" layoutY="108.0" text="*Tipo Inmueble*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textBarrio0" layoutX="395.0" layoutY="108.0" text="*Barrio*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textNumTelefono0" layoutX="668.0" layoutY="110.0" text="*Num. Telefono*" AnchorPane.rightAnchor="506.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textTitulo0" layoutX="280.0" layoutY="22.0" prefHeight="17.0" prefWidth="376.0" text="*Titulo*" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonFav0" layoutX="808.0" layoutY="70.0" mnemonicParsing="false" onAction="#clickFav0" style="-fx-background-radius: 5em; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px; -fx-background-color: #F08080;" text="Fav" textAlignment="CENTER" textFill="#fffcfc" textOverrun="CLIP" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="notaDetalle0" layoutX="898.0" layoutY="44.0" prefHeight="80.0" prefWidth="327.0" promptText="Guarda aquí tu nota sobre este imueble!" />
+                              <Button fx:id="saveNota0" layoutX="898.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickSaveNota0" text="Guardar nota" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="20.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0" />
+                        <AnchorPane fx:id="panelInmueble1" onMouseClicked="#ClickInmueble1" prefHeight="180.0" prefWidth="1263.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <ImageView fx:id="imageView1" fitHeight="140.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <image>
+                                    <Image url="@../recursos/fondoInicio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="textNumHabs1" text="*Num. habs*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumBanyos1" text="*Num. Baños*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textTipoInmueble1" text="*Tipo Inmueble*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textBarrio1" text="*Barrio*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textNumTelefono1" layoutX="662.0" layoutY="110.0" text="*Num. Telefono*" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textTitulo1" layoutX="280.0" layoutY="22.0" text="*Titulo*" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonFav1" layoutX="806.0" layoutY="64.0" mnemonicParsing="false" onAction="#clickFav1" style="-fx-background-radius: 5em; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px; -fx-background-color: #F08080;" text="Fav" textAlignment="CENTER" textFill="#fffcfc" textOverrun="CLIP" AnchorPane.rightAnchor="417.0" AnchorPane.topAnchor="64.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="textPrecio1" layoutX="685.0" layoutY="75.0" text="*Precio*" AnchorPane.leftAnchor="685.0" AnchorPane.topAnchor="75.0" />
+                              <TextArea fx:id="notaDetalle1" layoutX="897.0" layoutY="44.0" prefHeight="80.0" prefWidth="327.0" promptText="Guarda aquí tu nota sobre este imueble!" />
+                              <Button fx:id="saveNota1" layoutX="897.0" layoutY="135.0" mnemonicParsing="false" onAction="#clickSaveNota1" text="Guardar nota" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panelInmueble2" onMouseClicked="#ClickInmueble2" prefHeight="180.0" prefWidth="1263.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <ImageView fx:id="imageView2" fitHeight="140.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <image>
+                                    <Image url="@../recursos/fondoInicio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="textPrecio2" layoutX="682.0" layoutY="76.0" text="*Precio*" AnchorPane.leftAnchor="682.0" AnchorPane.topAnchor="76.0" />
+                              <Label fx:id="textNumHabs2" text="*Num. habs*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumBanyos2" text="*Num. Baños*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textTipoInmueble2" text="*Tipo Inmueble*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textBarrio2" text="*Barrio*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textNumTelefono2" layoutX="659.0" layoutY="110.0" text="*Num. Telefono*" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textTitulo2" layoutX="280.0" layoutY="22.0" text="*Titulo*" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonFav2" layoutX="808.0" layoutY="64.0" mnemonicParsing="false" onAction="#clickFav2" style="-fx-background-radius: 5em; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px; -fx-background-color: #F08080;" text="Fav" textAlignment="CENTER" textFill="#fffcfc" textOverrun="CLIP" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="64.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="notaDetalle2" layoutX="895.0" layoutY="44.0" prefHeight="80.0" prefWidth="327.0" promptText="Guarda aquí tu nota sobre este imueble!" />
+                              <Button fx:id="saveNota2" layoutX="895.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickSaveNota2" text="Guardar nota" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="20.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="580.0" />
+                        <AnchorPane fx:id="panelInmueble3" onMouseClicked="#ClickInmueble3" prefHeight="180.0" prefWidth="1066.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
+                           <children>
+                              <ImageView fx:id="imageView3" fitHeight="140.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <image>
+                                    <Image url="@../recursos/fondoInicio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="textPrecio3" layoutX="687.0" layoutY="75.0" text="*Precio*" AnchorPane.leftAnchor="687.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumHabs3" text="*Num. habs*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumBanyos3" text="*Num. Baños*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textTipoInmueble3" text="*Tipo Inmueble*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textBarrio3" text="*Barrio*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textNumTelefono3" layoutX="664.0" layoutY="110.0" text="*Num. Telefono*" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textTitulo3" layoutX="280.0" layoutY="22.0" text="*Titulo*" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonFav3" layoutX="799.0" layoutY="74.0" mnemonicParsing="false" onAction="#clickFav3" style="-fx-background-radius: 5em; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px; -fx-background-color: #F08080;" text="Fav" textAlignment="CENTER" textFill="#fffcfc" textOverrun="CLIP" AnchorPane.topAnchor="74.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="notaDetalle3" layoutX="895.0" layoutY="54.0" prefHeight="80.0" prefWidth="327.0" promptText="Guarda aquí tu nota sobre este imueble!" />
+                              <Button fx:id="saveNota3" layoutX="895.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickSaveNota3" text="Guardar nota" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="20.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="780.0" />
+                        <AnchorPane fx:id="panelInmueble4" onMouseClicked="#ClickInmueble4" prefHeight="180.0" prefWidth="1263.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="800.0">
+                           <children>
+                              <ImageView fx:id="imageView4" fitHeight="140.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <image>
+                                    <Image url="@../recursos/fondoInicio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="textPrecio4" layoutX="684.0" layoutY="67.0" text="*Precio*" AnchorPane.leftAnchor="687.0" AnchorPane.topAnchor="67.0" />
+                              <Label fx:id="textNumHabs4" text="*Num. habs*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textNumBanyos4" text="*Num. Baños*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="75.0" />
+                              <Label fx:id="textTipoInmueble4" text="*Tipo Inmueble*" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textBarrio4" text="*Barrio*" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textNumTelefono4" layoutX="661.0" layoutY="110.0" text="*Num. Telefono*" AnchorPane.topAnchor="110.0" />
+                              <Label fx:id="textTitulo4" layoutX="280.0" layoutY="22.0" text="*Titulo*" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="22.0">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonFav4" layoutX="800.0" layoutY="72.0" mnemonicParsing="false" onAction="#clickFav4" style="-fx-background-radius: 5em; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px; -fx-background-color: #F08080;" text="Fav" textAlignment="CENTER" textFill="#fffcfc" textOverrun="CLIP" AnchorPane.topAnchor="72.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="notaDetalle4" layoutX="896.0" layoutY="52.0" prefHeight="80.0" prefWidth="327.0" promptText="Guarda aquí tu nota sobre este imueble!" />
+                              <Button fx:id="saveNota4" layoutX="896.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickSaveNota4" text="Guardar nota" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="120.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="980.0">
+                           <children>
+                              <Button fx:id="botonAnterior" layoutX="367.0" layoutY="48.0" mnemonicParsing="false" onAction="#clickAnterior" text="Anterior" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="52.0" />
+                              <Button fx:id="botonSiguiente" layoutX="711.0" layoutY="48.0" mnemonicParsing="false" onAction="#clickSiguiente" text="Siguiente" AnchorPane.bottomAnchor="52.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="52.0" />
+                              <Text fx:id="textoNumPagina" layoutX="528.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Página 0 de 0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="52.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

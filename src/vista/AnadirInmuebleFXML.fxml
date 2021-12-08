@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="@../css/anadirinmueble.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AnadirInmuebleController">
+    <stylesheets>
+        <URL value="@/css/anadirinmueble.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="11.0" prefHeight="110.0" prefWidth="1280.0" style="-fx-background-color: #ADD8E6;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../recursos/logoFinal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconoUsuario" fitHeight="70.0" fitWidth="70.0" layoutX="1047.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../recursos/iconoCuenta.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="138.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trobify" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Comic Sans MS" size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="botonMiCuenta" layoutX="1027.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickedMiCuenta" prefHeight="40.0" prefWidth="125.0" stylesheets="@../css/anadirinmueble.css" text="Mi Cuenta" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="35.0">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="282.0" layoutY="633.0" prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: #ADD8E6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="buttonAnadirInmueble" layoutX="568.0" layoutY="43.0" mnemonicParsing="false" onAction="#clickAnadirInmueble" prefHeight="35.0" prefWidth="200.0" stylesheets="@../css/anadirinmueble.css" text="Añadir Inmueble" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E0FFFF;" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <Text layoutX="172.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre inmueble :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="80.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Superficie :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provincia :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="240.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barrio :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calle :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="360.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <Text layoutX="172.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planta :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Text>
+            <TextField fx:id="textNombre" layoutX="313.0" layoutY="60.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="40.0" />
+            <TextField fx:id="textPrecio" layoutX="313.0" layoutY="96.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="80.0" />
+            <TextField fx:id="textSuperficie" layoutX="313.0" layoutY="161.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="160.0" />
+            <TextField fx:id="textCiudad" layoutX="313.0" layoutY="202.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="200.0" />
+            <TextField fx:id="textProvincia" layoutX="313.0" layoutY="234.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="240.0" />
+            <TextField fx:id="textBarrio" layoutX="313.0" layoutY="265.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="280.0" />
+            <TextField fx:id="textCalle" layoutX="313.0" layoutY="299.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="320.0" />
+            <TextField fx:id="textNumero" layoutX="313.0" layoutY="341.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="360.0" />
+            <TextField fx:id="textPlanta" layoutX="313.0" layoutY="374.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="400.0" />
+            <TextField fx:id="textDescripcion" layoutX="313.0" layoutY="130.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="120.0" />
+            <TextField fx:id="textNumPlantas" layoutX="809.0" layoutY="60.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="160.0" />
+            <TextField fx:id="textNumBanos" layoutX="809.0" layoutY="96.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="80.0" />
+            <TextField fx:id="textNumHabitaciones" layoutX="809.0" layoutY="130.0" onKeyTyped="#onlyNumbers" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="120.0" />
+            <CheckBox fx:id="checkAmueblado" layoutX="617.0" layoutY="320.0" mnemonicParsing="false" text="Amueblado" AnchorPane.leftAnchor="617.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></CheckBox>
+            <ChoiceBox fx:id="chooserTipoVenta" layoutX="801.0" layoutY="256.0" prefWidth="150.0" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="40.0" />
+            <Label fx:id="textError" alignment="CENTER" contentDisplay="CENTER" layoutX="371.0" layoutY="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonCrearEstancia" layoutX="1103.0" layoutY="133.0" mnemonicParsing="false" onAction="#clickCrearEstancia" stylesheets="@../css/anadirinmueble.css" text="Crear estancia" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textEstancia" layoutX="900.0" layoutY="133.0" promptText="Ej: Dormitorio 1" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="chooserEstancia" layoutX="848.0" layoutY="425.0" prefWidth="150.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="425.0" />
+            <ImageView fx:id="imageViewSeleccionada" fitHeight="200.0" fitWidth="200.0" layoutX="935.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="120.0" />
+            <Button fx:id="buttonAnadirImagen" layoutX="1071.0" layoutY="425.0" mnemonicParsing="false" onAction="#clickAnadirImagen" prefHeight="27.0" prefWidth="181.0" stylesheets="@../css/anadirinmueble.css" text="Añadir imagen a estancia" AnchorPane.leftAnchor="1071.0" AnchorPane.topAnchor="425.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonSeleccionarImagen" layoutX="985.0" layoutY="435.0" mnemonicParsing="false" onAction="#clickSeleccionarImagen" prefHeight="27.0" prefWidth="100.0" stylesheets="@../css/anadirinmueble.css" text="Ver imagen" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="340.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="labelNumPlantas" layoutX="182.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num Plantas :" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="labelNumHabitaciones" layoutX="182.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num Habitaciones :" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="labelNumBaños" layoutX="182.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num Baños :" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="80.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="labelTipoVenta" layoutX="182.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Operacion :" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="labelErrores" layoutX="109.0" layoutY="452.0" prefHeight="40.0" prefWidth="473.0" textFill="RED">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkAguaCaliente" layoutX="510.0" layoutY="297.0" mnemonicParsing="false" text="Agua caliente" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkGaraje" layoutX="800.0" layoutY="244.0" mnemonicParsing="false" text="Garaje" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="244.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkSeguridad" layoutX="610.0" layoutY="230.0" mnemonicParsing="false" text="Seguridad" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="240.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkAdmiteMascotas" layoutX="726.0" layoutY="320.0" mnemonicParsing="false" text="Admite mascotas" AnchorPane.leftAnchor="726.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkCalefaccion" layoutX="699.0" layoutY="240.0" mnemonicParsing="false" text="Calefaccion" AnchorPane.leftAnchor="699.0" AnchorPane.topAnchor="240.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkAireAcond" layoutX="510.0" layoutY="297.0" mnemonicParsing="false" text="Aire acondicionado" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkJardin" layoutX="641.0" layoutY="279.0" mnemonicParsing="false" text="Jardin" AnchorPane.leftAnchor="641.0" AnchorPane.topAnchor="279.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkTerraza" layoutX="718.0" layoutY="279.0" mnemonicParsing="false" text="Terraza" AnchorPane.leftAnchor="718.0" AnchorPane.topAnchor="279.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkAscensor" layoutX="604.0" layoutY="239.0" mnemonicParsing="false" text="Ascensor" AnchorPane.leftAnchor="604.0" AnchorPane.topAnchor="239.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkPiscina" layoutX="510.0" layoutY="297.0" mnemonicParsing="false" text="Piscina" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <ChoiceBox fx:id="chooserTipoVivienda" layoutX="492.0" layoutY="196.0" prefWidth="175.0" AnchorPane.leftAnchor="650.0" />
+            <Text fx:id="labelTipoVivienda" layoutX="500.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de vivienda :" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="200.05078125">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textEnlaceImagen" layoutX="888.0" layoutY="341.0" prefHeight="25.0" prefWidth="200.0" promptText="Escribir enlace de la imagen" AnchorPane.leftAnchor="875.0" />
+            <CheckBox fx:id="checkTrastero" layoutX="498.0" layoutY="351.0" mnemonicParsing="false" text="Trastero">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </CheckBox>
+            <Button layoutX="419.0" layoutY="80.0" mnemonicParsing="false" onAction="#sugerirPrecio" text="Sugerir" />
+            <Text layoutX="98.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado :" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="440.0">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="chooserEstado" layoutX="250.0" layoutY="444.0" prefWidth="150.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="440.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

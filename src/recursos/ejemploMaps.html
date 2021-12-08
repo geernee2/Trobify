@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      div.invisible{
+          display: none;
+      }
+    </style>
+    <script>
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 40.4167, lng: -3.70325 },
+          zoom: 6,
+        });
+        ponerMarcadores()
+      }
+      
+     function ponerMarcadores(){
+      let inmuebles = document.getElementById('inmuebles').textContent
+      let entrada = inmuebles.split("#")
+      for(let i = 0; i < entrada.length; i++){
+          let url = "https://maps.googleapis.com/maps/api/geocode/json?address="+entrada[i]+"&key=AIzaSyCt1K7khnJ_DtfTLu24MPtX5Ql_JbVhHMs"
+          fetch(url).then(response => response.json()).then(data => {
+            let titulo = entrada[i] + ''
+            document.getElementById('console').textContent = titulo
+            let lat = data.results[0].geometry.location.lat
+            let long = data.results[0].geometry.location.lng
+            let posicion = {lat: lat, lng: long}
+            
+            const contentString =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading"></h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>"+titulo+"</b></p>" +
+            "</div>" +
+            "</div>";
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+            const marker = new google.maps.Marker({
+                position: posicion,
+                map: map,
+            });
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+            
+            map.setCenter(new google.maps.LatLng(lat, long))
+            map.setZoom(14);
+        }).catch(err => document.getElementById('console').textContent = err)  
+      }
+     }
+     
+      
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="console"></div>
+    <div id="inmuebles" class="invisible"></div>
+    <div id="console2"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt1K7khnJ_DtfTLu24MPtX5Ql_JbVhHMs&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>
