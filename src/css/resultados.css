@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.buttonFav{
+    -fx-background-radius:  5em;
+    -fx-min-width:  40px;
+    -fx-min-height: 40px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-background-color:  #F08080;
+}
+
+
+.buttonFav:hover{
+    -fx-background-color: red;
+}
+.buttonFav:pressed {
+    -fx-background-color: #990000;  
+}
+
+

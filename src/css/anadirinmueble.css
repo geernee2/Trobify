@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.buttonFuera{
+    -fx-background-color: #ADD8E6; -fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-width: 2px; -fx-border-color: white;
+}
+
+
+.buttonFuera:hover{
+    -fx-background-color: #B0E0E6;
+}
+.buttonFuera:pressed {
+    -fx-background-color: #AFEEEE;  
+}
+
+.buttonDentro{
+    -fx-background-color: #ADD8E6; -fx-background-radius: 2em; -fx-border-radius: 2em; -fx-border-width: 2px; -fx-border-color: white;
+}
+
+
+.buttonDentro:hover{
+    -fx-background-color: #B0E0E6;
+}
+.buttonDentro:pressed {
+    -fx-background-color: #AFEEEE;  
+}
+
+
